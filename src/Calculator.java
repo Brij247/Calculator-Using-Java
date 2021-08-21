@@ -1,19 +1,23 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class Calculator {
+public class Calculator implements ActionListener{
+	JFrame jf;
+	JLabel displayLabel;
     public Calculator() {
-    	JFrame jf=new JFrame("Calculator"); 
+    	jf=new JFrame("Calculator"); 
     	jf.setLayout(null);
     	jf.setSize(600, 600);
     	jf.setLocation(250, 150);
     	
     	
-    	JLabel displayLabel=new JLabel("Hello");
+    	displayLabel=new JLabel("Hello");
     	displayLabel.setBounds(30, 50, 540, 40);
     	displayLabel.setBackground(Color.gray);
     	displayLabel.setOpaque(true);
@@ -24,6 +28,7 @@ public class Calculator {
     	
     	JButton sevenButton=new JButton("7");
     	sevenButton.setBounds(40, 130, 80, 80);
+    	sevenButton.addActionListener(this);
     	jf.add(sevenButton);
     	
     	JButton eightButton=new JButton("8");
@@ -94,5 +99,11 @@ public class Calculator {
     
     public static void main(String[] args) {
 		Calculator c=new Calculator();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		jf.getContentPane().setBackground(Color.BLACK);
+		
 	}
 }
