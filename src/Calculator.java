@@ -7,14 +7,36 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
+import sun.awt.windows.ThemeReader;
+
 public class Calculator implements ActionListener{
 	JFrame jf;
 	JLabel displayLabel;
+	JButton sevenButton;
+	JButton eightButton;
+	JButton nineButton;
+	JButton fourButton;
+	JButton fiveButton;
+	JButton sixButton;
+	JButton oneButton;
+	JButton twoButton;
+	JButton threeButton;
+	JButton dotButton;
+	JButton zeroButton;
+	JButton equalButton;
+	JButton plusButton;
+	JButton minusButton;
+	JButton multiplicationButton;
+	JButton divisionButton;
+	
+	
+	
     public Calculator() {
     	jf=new JFrame("Calculator"); 
     	jf.setLayout(null);
     	jf.setSize(600, 600);
     	jf.setLocation(250, 150);
+    	jf.getContentPane().setBackground(Color.darkGray);
     	
     	
     	displayLabel=new JLabel("Hello");
@@ -26,70 +48,80 @@ public class Calculator implements ActionListener{
     	jf.add(displayLabel);
     	
     	
-    	JButton sevenButton=new JButton("7");
+    	sevenButton=new JButton("7");
     	sevenButton.setBounds(40, 130, 80, 80);
     	sevenButton.addActionListener(this);
     	jf.add(sevenButton);
     	
-    	JButton eightButton=new JButton("8");
+    	eightButton=new JButton("8");
     	eightButton.setBounds(140, 130, 80, 80);
+    	eightButton.addActionListener(this);
     	jf.add(eightButton);
     	
-    	JButton nineButton=new JButton("9");
+    	nineButton=new JButton("9");
     	nineButton.setBounds(240, 130, 80, 80);
+    	nineButton.addActionListener(this);
     	jf.add(nineButton);
     	
-    	JButton fourButton=new JButton("4");
+    	fourButton=new JButton("4");
     	fourButton.setBounds(40, 230, 80, 80);
+    	fourButton.addActionListener(this);
     	jf.add(fourButton);
     	
-    	JButton fiveButton=new JButton("5");
+    	fiveButton=new JButton("5");
     	fiveButton.setBounds(140, 230, 80, 80);
+    	fiveButton.addActionListener(this);
     	jf.add(fiveButton);
     	
-    	JButton sixButton=new JButton("6");
+    	sixButton=new JButton("6");
     	sixButton.setBounds(240, 230, 80, 80);
+    	sixButton.addActionListener(this);
     	jf.add(sixButton);
     	
-    	JButton oneButton=new JButton("1");
+    	oneButton=new JButton("1");
     	oneButton.setBounds(40, 330, 80, 80);
+    	oneButton.addActionListener(this);
     	jf.add(oneButton);
     	
     	
-    	JButton twoButton=new JButton("2");
+    	twoButton=new JButton("2");
     	twoButton.setBounds(140, 330, 80, 80);
+    	twoButton.addActionListener(this);
     	jf.add(twoButton);
     	
-    	JButton threeButton=new JButton("3");
+    	threeButton=new JButton("3");
     	threeButton.setBounds(240, 330, 80, 80);
+    	threeButton.addActionListener(this);
     	jf.add(threeButton);
     	
-    	JButton dotButton=new JButton(".");
+    	dotButton=new JButton(".");
     	dotButton.setBounds(40, 430, 80, 80);
+    	dotButton.addActionListener(this);
     	jf.add(dotButton);
     	
     	
-    	JButton zeroButton=new JButton("0");
+    	zeroButton=new JButton("0");
     	zeroButton.setBounds(140, 430, 80, 80);
+    	zeroButton.addActionListener(this);
     	jf.add(zeroButton);
     	
-    	JButton equalButton=new JButton("=");
+    	equalButton=new JButton("=");
     	equalButton.setBounds(240, 430, 80, 80);
     	jf.add(equalButton);
     	
-    	JButton plusButton=new JButton("+");
+    	plusButton=new JButton("+");
     	plusButton.setBounds(340, 130, 80, 80);
     	jf.add(plusButton);
     	
-    	JButton minusButton=new JButton("-");
+    	minusButton=new JButton("-");
     	minusButton.setBounds(340, 230, 80, 80);
     	jf.add(minusButton);
     	
-    	JButton multiplicationButton=new JButton("*");
+    	multiplicationButton=new JButton("*");
     	multiplicationButton.setBounds(340, 330, 80, 80);
     	jf.add(multiplicationButton);
     	
-    	JButton divisionButton=new JButton("/");
+    	divisionButton=new JButton("/");
     	divisionButton.setBounds(340, 430, 80, 80);
     	jf.add(divisionButton);
     	
@@ -103,7 +135,42 @@ public class Calculator implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		jf.getContentPane().setBackground(Color.BLACK);
-		
+		if(e.getSource()== sevenButton) {
+			displayLabel.setText("7");
+			
+		}else if(e.getSource()== eightButton){
+			displayLabel.setText("8");	
+		}
+		else if(e.getSource()== nineButton){
+			displayLabel.setText("9");	
+		}
+		else if(e.getSource()== fourButton){
+			displayLabel.setText("4");	
+		}else if(e.getSource()== fiveButton){
+			displayLabel.setText("5");	
+		}else if(e.getSource()== sixButton){
+			displayLabel.setText("6");	
+		}else if(e.getSource()== oneButton){
+			displayLabel.setText("1");	
+		}else if(e.getSource()== twoButton){
+			displayLabel.setText("2");	
+		}else if(e.getSource()== threeButton){
+			displayLabel.setText("3");	
+		}else if(e.getSource()== dotButton){
+			displayLabel.setText(".");	
+		}else if(e.getSource()== zeroButton){
+			displayLabel.setText("0");
+		}else if(e.getSource()== minusButton){
+			
+		}else if(e.getSource()== plusButton){
+			
+		}else if(e.getSource()== multiplicationButton){
+			
+		}else if(e.getSource()== divisionButton){
+			
+		}else if(e.getSource()== equalButton){
+			
+		}
+			
 	}
 }
