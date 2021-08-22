@@ -27,7 +27,7 @@ public class Calculator implements ActionListener{
 	JButton plusButton;
 	JButton minusButton;
 	JButton multiplicationButton;
-	JButton divisionButton;
+	JButton divisionButton,clearButton;
 	
 	
 	
@@ -125,6 +125,11 @@ public class Calculator implements ActionListener{
     	divisionButton.setBounds(340, 430, 80, 80);
     	jf.add(divisionButton);
     	
+    	clearButton=new JButton("Clear");
+    	clearButton.setBounds(440, 430, 80, 80);
+    	clearButton.addActionListener(this);
+    	jf.add(clearButton);
+    	
     	jf.setVisible(true);
     	jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -171,6 +176,8 @@ public class Calculator implements ActionListener{
 			
 		}else if(e.getSource()== equalButton){
 			
+		}else if(e.getSource()== clearButton){
+			displayLabel.setText("");
 		}
 			
 	}
